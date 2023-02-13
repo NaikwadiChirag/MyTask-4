@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ----------------SCSS Styles------------ -->
+    <link rel="stylesheet" href="./styles/dashboard.css">
+    <title>Quantum - Dashboard</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img class="logo-img" src="assets/icons/logo used in header.svg" alt="Bulb - Header Logo">
+            <div class="navbar">
+                <div class="navbar-middle">
+                    <a class="navbar-active" href="#">Dashboard</a>
+                    <a href="#">Content </a>
+                    <a href="#">Users</a>
+                    <a href="#">Report</a>
+                    <a href="#">Admin</a>
+                </div>
+                <button id="notification" class="notification BTN">
+                    <img id="notification-icon-img" class="navbar-icon" src="assets/icons/alerts.svg" alt="Alert Icon">
+                    <span id="notification-badge" class="badge"> 0 </span>
+
+                </button>
+                <div class="notification-list-div">
+                    <div id="notification-list">
+                        
+                    </div>
+                    <button id="notification-btn" tabindex="-1" class="BTN"> Show All</button>
+                </div>
+                <button id="announcement" class="notification BTN">
+                    <img id="announcement-icon-img" class="navbar-icon" src="assets/icons/announcements.svg" alt="Announcements Icon">
+                    <span id="announcement-badge" class="badge"> 0 </span>
+                </button>
+                <div class="announcement-list-wrapper">
+                    <div class="announcement-list">                       
+                                              
+                    </div>
+                    <div class="announcement-btn-container">
+                        <button class="BTN announcement-btn" tabindex="-1"> Show All</button>
+                        <button class="BTN announcement-btn"tabindex="-1"> Clear </button>
+                    </div>
+                </div>
+                <button class="BTN">
+                    <img class="user-avatar" src="assets/per.jpg" alt="User Avatar">
+                </button>
+                <button class="BTN" id="hamburger-icon">
+                    <img class="hamburger-menu-icon" src="assets/icons/hamburger-menu.svg" alt="Hambuger Menu Icon">
+                </button>
+                <!-- <div class="hamburger-menu-wrapper"> -->
+                    <ul class="hamburger-menu non-focusable">
+                        <li class="hamburger-list-item">
+                            <a class="hamburger-item" href="#" > Dashboard </a>
+                        </li>
+                        <li class="hamburger-list-item">
+                            <a href="#" class="hamburger-item">
+                                Content <span class="hamburger-carrot">&or;</span>
+                            </a>
+                            <ul class="inner-item">
+                                <li> Course Catalog</li>
+                            </ul>
+                        </li>
+                        <li class="hamburger-list-item">
+                            <a href="#" class="hamburger-item"> 
+                                Users <span class="hamburger-carrot">&or;</span>
+                            </a>
+                            <ul class="inner-item">
+                                <li> Profile</li>
+                                <li> Sigin Out</li>
+                            </ul>
+                        </li>
+                        <li class="hamburger-list-item">
+                            <a href="#" class="hamburger-item"> 
+                                Reports <span class="hamburger-carrot">&or;</span> 
+                            </a>
+                            <ul class="inner-item">
+                                <li>  View Report</li>
+                                <li>  Generate Report</li>
+                            </ul>
+                        </li>
+                        <li class="hamburger-list-item">
+                            <a href="#" class="hamburger-item"> 
+                                Admin <span class="hamburger-carrot">&or;</span>
+                            </a>
+                            <ul class="inner-item">
+                                <li> Course Catalog</li>
+                                <li> Students Catalog</li>
+                                <li> Teachers Catalog</li>
+                            </ul>
+                        </li>
+                    </ul>
+                <!-- </div> -->
+            </div>    
+        </div>
+        <div class="main-content">
+            <div class="menu-header flex-row">
+                <div class="courses">
+                    <button class="BTN">
+                        <img class="menu-header-icon" src="assets/icons/courses.svg" alt="Courses Icon">
+                        <span id="course-num" class="menu-header-txt strong"> 4 </span>
+                        <span class="menu-header-txt"> Courses</span>
+                    </button>
+                </div>
+                <div class="classes">
+                    <button class="BTN">
+                        <img class="menu-header-icon" src="assets/icons/classes.svg" alt="Classes Icon">
+                        <span class="menu-header-txt strong"> 4 </span>
+                        <span class="menu-header-txt"> Classes</span>
+                    </button>
+                </div>
+            </div>
+            <div class="filter-div flex-row">
+                <div class="filter-left">
+                    <p id="filter-course-num">Showing 4 of 4 Courses</p>
+                </div>
+                <div class="filter-right flex-row">
+                    <p> Sort By: </p>  
+                    <select>  
+                    <option value = "Course Name"> Course Name   </option>  
+                    <option value = "Acceleration"> Acceleration   </option>  
+                    <option value = "Displacement"> Displacement  </option>  
+                    <option value = "Velocity"> Velocity  </option>  
+                    </select>
+                    <button class="BTN sort-icon">
+                        <img src="assets/icons/sort.svg" alt="Sort Icon">    
+                    </button>
+                </div>
+            </div>
+            <div class="main-body">
+
+
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer-top">
+                <a href=""><span> About</span></a>
+                <span class="vertical-line">&#124;</span>
+                <a href=""><span> Contact Us</span></a>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-logo">
+                    <img src="assets/icons/logo used in footer.svg" alt="Bulb - Footer Logo">
+                </div>
+                <p id="copyright"> Copyright &copy; 2022-23</p>
+                <p id="org-name"> Zeus System Pvt. Ltd.</p>
+                <p>All rights reserved</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- --------------------------Scripts--------------------- -->
+    <script src="./ts/dashboard.js"></script>
+</body>
+</html>
